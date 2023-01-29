@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' href='style.css'>
+    <title>Movie</title>
+</head>
+<body>
+    <header>
+        <button type="button" class="button" onclick="gHome()">Home</button>
+        <h3>Hello Movie</h3>
+        <!-- <button type="button" onclick="gGenre()">Genre</button> -->
+        <form id="form">
+            <input type="text" placeholder="Search" id="search" class="search">
+        </form>
+    </header>
+
+    <div id="tags">
+        <!-- <div class="tag">Action</div>
+        <div class="tag">Adventure</div>
+        <div class="tag">Drama</div>
+        <div class="tag">Comedy</div> -->
+    </div>
+
+    <!-- The overlay -->
+    <div id="myNav" class="overlay">
+
+        <!-- Button to close the overlay navigation -->
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      
+        <!-- Overlay content -->
+        <div class="overlay-content" id="overlay-content">
+        </div>
+        <a href="javascript:void(0)" class="arrow left-arrow" id="left-arrow">&#8678;</a>
+        <a href="javascript:void(0)" class="arrow right-arrow" id="right-arrow">&#8680;</a>
+    </div>
+
+    <!-- The overlay -->
+    <div id="detailNav" class="overlay">
+
+        <!-- Button to close the overlay navigation -->
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  
+        <!-- Overlay content -->
+        <div class="overlay-content" id ="overlay-content2"></div>
+    </div>
+
+  <!-- The overlay -->
+  <!-- <div id="genreNav" class="overlay"> -->
+
+    <!-- Button to close the overlay navigation -->
+    <!-- <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a> -->
+
+    <!-- Overlay content -->
+    <!-- <div class="overlay-content" id ="overlay-content3">
+        </div>
+    </div>
+  </div> -->
+
+    <main id="main">
+        <!-- <div class="movie">
+            <img src="" alt="Image">
+
+            <div class="movie-info">
+                <h3>Movie Title</h3>
+                <span class="green">9.8</span>
+            </div>
+
+            <div class="overview">
+                <h3>Overview</h3>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, atque vero. Inventore dolores rem accusantium aut exercitationem a, totam nostrum.
+            </div>
+
+            <div class="button">
+                <button type="button">Hello</button>
+            </div>
+        </div>
+
+        <div class="movie">
+            <img src="" alt="Image">
+
+            <div class="movie-info">
+                <h3>Movie Title</h3>
+                <span class="green">9.8</span>
+            </div>
+
+            <div class="overview">
+                <h3>Overview</h3>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates, doloremque laudantium reiciendis necessitatibus molestias maxime cum dolorum amet corrupti nesciunt.
+            </div>
+
+            <div class="button">
+                <button type="button">Hello</button>
+            </div>
+        </div>
+
+        <div class="movie">
+            <img src="" alt="Image">
+
+            <div class="movie-info">
+                <h3>Movie Title</h3>
+                <span class="green">9.8</span>
+            </div>
+
+            <div class="overview">
+                <h3>Overview</h3>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis fuga deleniti quibusdam distinctio sed vitae saepe doloribus, veritatis odio sint.
+            </div>
+
+            <div class="button">
+                <button type="button">Hello</button>
+            </div>
+        </div> -->
+    </main>
+
+    <div class="pagination">
+        <div class="page" id="prev">Previous</div>
+        <div class="current" id="current">1</div>
+        <div class="page" id="next">Next</div>
+        <!-- <div class="trybtn" id="tryBtn">Try</div> -->
+    </div>
+
+    <script src='script.js'></script>
+</body>
+</html>
