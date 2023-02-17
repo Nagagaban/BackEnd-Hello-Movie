@@ -11,6 +11,7 @@ namespace Movie.Data
         }
 
         public DbSet<User> Users { get; set; }
+        public DbSet<Recommender> Recommenders { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

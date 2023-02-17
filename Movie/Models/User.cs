@@ -1,4 +1,6 @@
-﻿namespace Movie.Models
+﻿using Microsoft.EntityFrameworkCore;
+
+namespace Movie.Models
 {
     public class User
     {

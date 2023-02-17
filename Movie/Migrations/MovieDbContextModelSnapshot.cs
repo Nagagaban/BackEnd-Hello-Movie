@@ -21,6 +21,20 @@ namespace Movie.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
+            modelBuilder.Entity("Movie.Models.Recommender", b =>
+                {
+                    b.Property<int>("MovieId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Rating")
+                        .HasColumnType("int");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
+                    b.ToTable("Recommenders");
+                });
+
             modelBuilder.Entity("Movie.Models.User", b =>
                 {
                     b.Property<int>("UserId")

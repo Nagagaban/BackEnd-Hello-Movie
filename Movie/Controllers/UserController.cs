@@ -72,6 +72,7 @@ namespace Movie.Controllers
             var currentUser = await _movieDbContext.Users.SingleOrDefaultAsync(u => u.UserName == objUser.UserName);
             if (currentUser != null)
             {
+                Console.WriteLine("Hello");
                 // Verify the user's password
                 if (objUser.UserPassword == currentUser.UserPassword)
                 {
@@ -99,13 +100,33 @@ namespace Movie.Controllers
             }
         }
 
+        //THIS IS ORIGINAL ADDUSER
+
+        //[HttpPost]
+        //[Route("AddUser")]
+        //public async Task<User> AddUser(User objUser)
+        //{
+        //    _movieDbContext.Users.Add(objUser);
+        //    await _movieDbContext.SaveChangesAsync();
+        //    return objUser;
+        //}
+
         [HttpPost]
         [Route("AddUser")]
-        public async Task<User> AddUser(User objUser)
+        public async Task<IActionResult> AddUser(User objUser)
         {
+            var existingUser = _movieDbContext.Users
+                .FirstOrDefault(u => u.UserName == objUser.UserName ||
+                                    u.UserPassword == objUser.UserPassword);
+
+            if (existingUser != null)
+            {
+                return BadRequest("User already exists." + existingUser.UserName + "Role: " + existingUser.UserType);
+            }
+
             _movieDbContext.Users.Add(objUser);
             await _movieDbContext.SaveChangesAsync();
-            return objUser;
+            return Ok(objUser);
         }
 
         //[HttpPost]
